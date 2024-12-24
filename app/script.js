@@ -8,7 +8,7 @@ const allowedPages = [
 
 // Get the current path from the full URL
 const currentPath = window.location.pathname;
-console.log(currentPath)
+alert(currentPath)
 // Check if the current page is in the allowed pages list
 if (allowedPages.includes(currentPath)) {
     alert("Statement works")
