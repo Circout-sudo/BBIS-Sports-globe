@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <input type="submit" value="Login">
+            <div class="error" id="error-message"></div>
+        </form>
+    </div>
+
+    <script>
+        // Encoded password (Base64 encoding of "supersecret123")
+        const encodedPassword = "c3VwZXJzZWNyZXQxMjM=";
+
+        function decodePassword(encoded) {
+            return atob(encoded); // Decode the Base64 string
+        }
+
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const userInput = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+            const decodedPassword = decodePassword(encodedPassword);
+
+            if (userInput === decodedPassword) {
+                // Redirect to entered.html if the password is correct
+                window.location.href = "entered.html";
+            } else {
+                errorMessage.textContent = "Incorrect password. Try again.";
+            }
+        });
+    </script>
+</body>
+</html>

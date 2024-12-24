@@ -1,0 +1,52 @@
+body {
+  text-align: center;
+  margin: 0; /* Removes default body margin */
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.a {
+  color: red;
+}
+
+.k {
+        background-color: #00008B;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+.k h1 {
+        color: white;
+        font-size: 100px;
+        margin: 0;
+      }
+
+.games-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows the boxes to wrap on smaller screens */
+}
+
+.game-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.game-box:hover {
+  transform: scale(1.1); /* Enlarges the box */
+  background: linear-gradient(135deg, #00008B, #1E90FF); /* Color transition */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+}

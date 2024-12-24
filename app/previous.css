@@ -1,0 +1,77 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Bebas Neue", sans-serif;
+        background-color: #f4f4f9;
+        text-align: center;
+      }
+
+      /* Header Styling */
+      .k {
+        position: relative; /* Needed for absolute positioning of the button */
+        background-color: #00008b;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .k h1 {
+        color: white;
+        font-size: 100px;
+        margin: 0;
+      }
+
+      /* Button in Top-Right Corner */
+      .home-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-decoration: none;
+        background-color: #1e90ff; /* Light blue */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .home-button:hover {
+        background-color: #00008b; /* Darker blue on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Button Container Styling */
+      .games-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px; /* Adds spacing between header and button */
+      }
+
+      /* Button Styling */
+      .game-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        background-color: blue;
+        width: 90%; /* Stretches almost to the sides */
+        height: 200px;
+        border-radius: 10px;
+        font-size: 30px;
+        transition: all 0.3s ease;
+      }
+
+      .game-box:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #00008b, #1e90ff);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      }
