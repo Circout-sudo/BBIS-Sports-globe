@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Check if the current page is not the intended 'index.html'
-        if (window.location.pathname !== "/index.html") {
-            window.location.href = "/pass.html"; // Redirect to index.html
-        }
+        // List of allowed pages
+const allowedPages = [
+    "/index.html",
+    "/entered.html",
+    "/Previous_games.html",
+    "/Upcoming_games.html"
+];
+
+// Check if the current page is not one of the allowed pages
+if (!allowedPages.includes(window.location.pathname)) {
+    window.location.href = "/pass.html"; // Redirect to pass.html
+}
     </script>
 </head>
 <body>
