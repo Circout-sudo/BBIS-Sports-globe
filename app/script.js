@@ -1,6 +1,6 @@
 // List of allowed pages (use full URLs for clarity)
 const allowedPages = [
-    "/"
+    "/",
     "/index.html",
     "/entered.html",
     "/Previous_games.html",
