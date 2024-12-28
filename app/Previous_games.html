@@ -22,8 +22,11 @@
       <a class="game-box" href="2024.html">2024</a>
     </main>
   </body>
-  if (localStorage.getItem("isLoggedIn") !== "true") {
-            window.location.href = "pass.html"; // Redirect only if not logged in
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "index.html"; // Redirect only if not logged in
             return; // Prevent further execution
         }
+  </script>
+  
 </html>
