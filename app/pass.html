@@ -77,7 +77,8 @@
     document.addEventListener("DOMContentLoaded", () => {
         // Check if the user is already logged in
         if (localStorage.getItem("isLoggedIn") === "true") {
-            window.location.href = "entered.html";
+            window.location.href = "entered.html"; // Redirect only if logged in
+            return; // Prevent further execution
         }
     });
 
@@ -98,6 +99,7 @@
         }
     });
 </script>
+
 
 </body>
 </html>
