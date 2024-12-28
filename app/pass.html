@@ -68,27 +68,36 @@
     </div>
 
     <script>
-        // Encoded password (Base64 encoding of "supersecret123")
-        const encodedPassword = "c3VwZXJzZWNyZXQxMjM=";
+    const encodedPassword = "c3VwZXJzZWNyZXQxMjM=";
 
-        function decodePassword(encoded) {
-            return atob(encoded); // Decode the Base64 string
+    function decodePassword(encoded) {
+        return atob(encoded); // Decode the Base64 string
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Check if the user is already logged in
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            window.location.href = "entered.html";
         }
+    });
 
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form submission
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
 
-            const userInput = document.getElementById("password").value;
-            const errorMessage = document.getElementById("error-message");
-            const decodedPassword = decodePassword(encodedPassword);
+        const userInput = document.getElementById("password").value;
+        const errorMessage = document.getElementById("error-message");
+        const decodedPassword = decodePassword(encodedPassword);
 
-            if (userInput === decodedPassword) {
-                // Redirect to entered.html if the password is correct
-                window.location.href = "entered.html";
-            } else {
-                errorMessage.textContent = "Incorrect password. Try again.";
-            }
-        });
-    </script>
+        if (userInput === decodedPassword) {
+            // Save the login state in localStorage
+            localStorage.setItem("isLoggedIn", "true");
+            // Redirect to entered.html if the password is correct
+            window.location.href = "entered.html";
+        } else {
+            errorMessage.textContent = "Incorrect password. Try again.";
+        }
+    });
+</script>
+
 </body>
 </html>
