@@ -85,3 +85,21 @@ body {
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+.home-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-decoration: none;
+        background-color: #1e90ff; /* Light blue */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+.home-button:hover {
+        background-color: #00008b; /* Darker blue on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
