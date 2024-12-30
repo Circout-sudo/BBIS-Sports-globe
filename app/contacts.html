@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Information</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/contact.css" />
+  </head>
+  <header class="k">
+    <h1>Contact Information</h1>
+    <a class="home-button" href="entered.html">Home</a>
+  </header>
+  <body>
+    <main class="info-container">
+      <div class="contact-info">
+        <p>For Sport-related recommendations:</p>
+        <p><a href="mailto:phiwongp@bbis.de">phiwongp@bbis.de</a></p>
+      </div>
+      <div class="contact-info">
+        <p>For website recommendations or issues:</p>
+        <p><a href="mailto:yojtemka@bbis.de">yojtemka@bbis.de</a></p>
+      </div>
+    </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Check if the user is logged in
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "index.html"; // Redirect only if not logged in
+        return; // Prevent further execution
+      }
+    });
+  </script>
+</html>
 
