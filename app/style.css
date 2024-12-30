@@ -50,3 +50,38 @@ body {
   background: linear-gradient(135deg, #00008B, #1E90FF); /* Color transition */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow */
 }
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-info {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+  transform: scale(1.05); /* Slightly enlarges the box */
+  background: linear-gradient(135deg, #00008B, #1E90FF); /* Adds a gradient */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+}
+
+.contact-info a {
+  color: #FFD700; /* Golden text for email links */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
