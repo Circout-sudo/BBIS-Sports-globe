@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+     <script src=
+"https://cdn.jsdelivr.net/npm/sweetalert2@11">
+      </script>
     <style>
         body {
             display: flex;
@@ -69,7 +72,15 @@
 
     <script>
     const encodedPassword = "c3VwZXJzZWNyZXQxMjM=";
-    alert("This site requires cookies to function properly.")
+    function showCustomAlert() {
+            // Create a custom alert box with SweetAlert
+            Swal.fire({
+                title: 'Welcome to BBIS-Sports-Globe',
+                text: 'This site requires to cookies to function.',
+                confirmButtonText: 'OK'
+            });
+        }
+    showCustomAlert();
 
     function decodePassword(encoded) {
         return atob(encoded); // Decode the Base64 string
