@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previous Games</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/previous.css" />
+  </head>
+  <header class="k">
+      <h1>Upcoming Games</h1>
+      <a class="home-button" href="entered.html">Home</a>
+    </header>
+  <body>
+    
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Check if the user is logged in
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "index.html"; // Redirect only if not logged in
+            return; // Prevent further execution
+        }
+    });
+  </script>
+  
+</html>
