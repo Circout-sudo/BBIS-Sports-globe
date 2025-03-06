@@ -11,16 +11,59 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/previous.css" />
+    
   </head>
+  <style>
+    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #00008b;
+            color: white;
+            padding: 50px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .game-box {
+            background-color: white;
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .game-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #00008b;
+        }
+        .game-date {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #333;
+        }
+        .game-time {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #666;
+        }
+  </style>
   <header class="k">
       <h1>Previous Games</h1>
       <a class="home-button" href="entered.html">Home</a>
     </header>
   <body>
-    <main class="games-container">
-      <a class="game-box" href="2024.html">2024</a>
-    </main>
+    <div class="game-box">
+        <div class="game-title">BBS vs BBIS</div>
+         <div class="game-sport">SPORT: BASKETBALL</div>
+        <div class="game-date">Date: 8/2/2025</div>
+        <div class="game-time">Time: 9:00</div>
+      <div class="game-time">Winner:BBIS</div>
+    </div>
+
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
